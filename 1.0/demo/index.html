@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>floatNotify的demo</title>
+    <script src="http://g.tbcdn.cn/kissy/k/1.4.0/seed-min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="http://g.tbcdn.cn/kissy/k/1.4.0/css/dpl/base-min.css">
+</head>
+<body>
+<h2>floatNotify的demo</h2>
+
+<script>
+    var S = KISSY;
+    if (S.Config.debug) {
+        var srcPath = "../../../";
+        S.config({
+            packages:[
+                {
+                    name:"gallery",
+                    path:srcPath,
+                    charset:"utf-8",
+                    ignorePackageNameInUri:true
+                }
+            ]
+        });
+    }
+
+    S.use('gallery/floatNotify/1.0/index', function (S, FloatNotify) {
+        new FloatNotify();
+        floatNotify.simple('测试一下好吗~',2000);
+        setTimeout(function(){
+            floatNotify.simple('再来一发好吗~',3000);
+        },3010)
+    })
+</script>
+</body>
+</html>

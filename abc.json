@@ -1,0 +1,14 @@
+{
+    "name": "floatNotify",
+    "version": "1.0",
+    "desc": "",
+    "cover": "",
+    "tag":"",
+    "author": {
+        "name": "夕剑",
+        "email": "xijian.py@taobao.com",
+        "page": ""
+    },
+    "type": "kissy-gallery",
+    "type-url": "http://gallery.kissyui.com/guide"
+}
