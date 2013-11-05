@@ -3,7 +3,7 @@
  * @author 夕剑<xijian.py@taobao.com>
  * @module floatNotify
  **/
-KISSY.add(function (S, Node,Base) {
+KISSY.add(function (S,Base) {
     var EMPTY = '';
     var $ = Node.all;
     var win = window;

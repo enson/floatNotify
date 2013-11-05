@@ -27,10 +27,12 @@
 
     S.use('gallery/floatNotify/1.0/index', function (S, FloatNotify) {
         new FloatNotify();
-        floatNotify.simple('测试一下好吗~',2000);
+        //floatNotify.simple('测试一下好吗~',1000);
         setTimeout(function(){
-            floatNotify.simple('再来一发好吗~',3000);
-        },3010)
+            floatNotify.alert('警告模式弹出框', function() {
+                this.hide();
+            }, {useTap :  true}).show();
+        },1500)
     })
 </script>
 </body>
