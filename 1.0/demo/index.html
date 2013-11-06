@@ -9,6 +9,11 @@
 <body>
 <h2>floatNotify的demo</h2>
 
+<button class="flash-mode">闪现模式</button>
+<button class="msg-mode">消息模式</button>
+<button class="alert-mode">警告模式</button>
+<button class="confirm-mode">确认模式</button>
+
 <script>
     var S = KISSY;
     if (S.Config.debug) {
@@ -25,14 +30,32 @@
         });
     }
 
-    S.use('gallery/floatNotify/1.0/index', function (S, FloatNotify) {
+    S.use('node,gallery/floatNotify/1.0/index', function (S,Node, FloatNotify) {
         new FloatNotify();
-        //floatNotify.simple('测试一下好吗~',1000);
-        setTimeout(function(){
+        var $= S.all;
+        $('.flash-mode').on('click',function(){
+            floatNotify.simple('闪现模式~',1000);
+        })
+        $('.msg-mode').on('click',function(){
+            floatNotify.msg('消息模式~').show();
+        })
+        $('.alert-mode').on('click',function(){
             floatNotify.alert('警告模式弹出框', function() {
                 this.hide();
             }, {useTap :  true}).show();
-        },1500)
+        })
+        $('.confirm-mode').on('click',function(){
+            floatNotify.confirm('确认模式弹出框',
+                    '<input type="text" size="20" placeholder="请输入数字" />',
+                    function(e, isConfirm) {
+                        if (isConfirm) {
+                            alert($('.c-float-popWrap .content input').val());
+                        }
+                        this.hide();
+                    }).show();
+        })
+
+
     })
 </script>
 </body>

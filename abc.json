@@ -1,9 +1,9 @@
 {
     "name": "floatNotify",
     "version": "1.0",
-    "desc": "",
+    "desc": "notify for H5 page",
     "cover": "",
-    "tag":"",
+    "tag":"notify",
     "author": {
         "name": "夕剑",
         "email": "xijian.py@taobao.com",
